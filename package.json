@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node express/server.js",
     "start": "next start -p $PORT",
-    "build": "next build && PORT=3002 pm2 start npm --name my-next -- start"
+    "build": "next build && PORT=3002 npm start"
   },
   "repository": {
     "type": "git",

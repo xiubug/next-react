@@ -7,6 +7,7 @@ const handle = app.getRequestHandler()
 
 app.prepare()
   .then(() => {
+    const port = 3002
     const server = express()
     
     server.get('/p/:id', (req, res) => {
@@ -18,10 +19,10 @@ app.prepare()
     server.get('*', (req, res) => {
       return handle(req, res)
     })
-
-    server.listen(3002, (err) => {
+    
+    server.listen(port, (err) => {
       if (err) throw err
-      console.log('> Ready on http://localhost:3002')
+      console.log('> Ready on http://localhost:' + port)
     })
   })
   .catch((ex) => {

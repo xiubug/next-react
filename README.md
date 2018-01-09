@@ -24,3 +24,13 @@ $ cd next-react
 $ npm install
 $ npm run dev         # 访问 http://localhost:3002
 ```
+
+## 使用pm2守护进程
+
+```bash
+# for development
+$ pm2 start npm --name "my-next" -- run dev
+
+# for production
+$ pm2 start npm --name "my-next" -- run build         
+```
